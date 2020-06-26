@@ -27,13 +27,6 @@ class ApiRoutes extends BaseConfig {
         this.router.get('/user', AuthUser, UserController.checkUser)
         this.router.put('/user/company', AuthUser, UserController.updateCompany)
 
-        // LINK MANAGEMENT
-        this.router.get('/link', AuthUser, LinkController.index)
-        this.router.post('/link', AuthUser, LinkController.create)
-        this.router.put('/link/edit/:id', AuthUser, LinkController.update)
-        this.router.delete('/link/delete/:id', AuthUser, LinkController.delete)
-        this.router.put('/link/change-order', AuthUser, LinkController.changeOrder)
-        
         // PRODUCT MANAGEMENT
         this.router.get('/product', AuthUser, ProductController.index)
         this.router.post('/product/create', AuthUser, ProductController.create)
